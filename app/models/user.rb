@@ -3,6 +3,12 @@ class User < ApplicationRecord
     :recoverable, :rememberable, :validatable,
     :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
+  has_many :comments, dependent: :destroy
+  has_many :ratings, dependent: :destroy
+  has_many :courses, dependent: :destroy
+
+  enum role: {guest: 0, student: 1, lecture: 2, admin: 3}
+
   class << self
     def from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
