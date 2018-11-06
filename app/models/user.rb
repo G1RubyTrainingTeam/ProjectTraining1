@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :ratings, dependent: :destroy
   has_many :courses, dependent: :destroy
 
-  enum role: {guest: 0, student: 1, lecture: 2, admin: 3}
+  enum role: {student: 0, lecture: 1, admin: 2}
 
   class << self
     def from_omniauth(auth)

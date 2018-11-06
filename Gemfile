@@ -20,6 +20,7 @@ gem "font-awesome-rails"
 gem "figaro"
 gem "omniauth-google-oauth2"
 gem "rails-i18n"
+gem "cancancan", "~> 2.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

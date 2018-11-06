@@ -24,7 +24,11 @@
           <li><a href="#"><i class="fa fa-gear fa-fw"></i><%= t ".settings" %></a>
           </li>
           <li class="divider"></li>
-          <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i><%= t ".logout" %></a>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fa fa-sign-out fa-fw"></i>
+              <%= t ".logout" %>
+            <% end %>
           </li>
         </ul>
       </li>
