@@ -1,0 +1,28 @@
+en:
+  payings:
+    new:
+      order: "Order"
+      user: "User: "
+      balances: "Balances: "
+      vnd: " VND"
+      total_price: "Total price: "
+      details: "Details: "
+      course: "Course"
+      price: "Price"
+    create:
+      title: "Enter confirmation code"
+      confirm_code: "Confirmation code"
+      check_mail: "Please check your email to get the code!"
+      btn_ok: "OK"
+      need_payin_alert: "Your balances in e-wallet is not enough to pay, please pay in to continue."
+    update:
+      code_fail: "Incorrect confirmation code, try again"
+      expired: "The code has expired, you need to make a new paying!"
+      no_paying: "Paying does not exist"
+      success_paying: "Successful paying"
+  paying_mailer:
+    paying_email:
+      subject: "CODE paying"
+      greeting: "Dear "
+      content: "Your code is "
+      warning: " (This code is only valid for 2 minutes)"

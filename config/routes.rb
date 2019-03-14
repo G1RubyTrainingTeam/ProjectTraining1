@@ -44,6 +44,6 @@ Rails.application.routes.draw do
 
     resources :e_wallets, only: [:create, :show]
     resources :credits, only: [:update, :new, :create]
-    resources :transactions, only: [:create, :new]
+    resources :payings, only: [:new, :create, :update]
   end
 end

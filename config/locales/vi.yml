@@ -187,6 +187,7 @@ vi:
     continue_view: "Xem khóa khác"
     buy_course: "Thêm vào giỏ"
     purchase_confirm: "Thanh toán"
+    paying: "Thanh toán ví điện tử"
   search:
     average_rating: "Bình chọn trung bình"
     contact: "Liên lạc qua"

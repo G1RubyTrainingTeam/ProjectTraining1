@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="form-paying">
+    <%= form_for @paying, url: payings_path, method: :post, remote: true do |f| %>
+      <h3><span class="label label-primary"><%= t ".order" %></span></h3>
+      <div class="well" id="well">
+      <%= link_to cart_items_path, class: "close" do %><i class="fa fa-times"></i><% end %>
+      <br>
+      <p>
+        <span>
+          <i class="glyphicon glyphicon-user"></i>
+          <%= t ".user" %>
+        </span>
+        <span><%= current_user.name %></span>
+      </p>
+      <p>
+        <span>
+          <i class="glyphicon glyphicon-usd"></i>
+          <%= t ".balances" %>
+        </span>
+        <span><%= current_user.e_wallet.balances %></span>
+        <%= t ".vnd" %>
+      </p>
+      <p>
+        <span>
+          <i class="glyphicon glyphicon-minus"></i>
+          <%= t ".total_price" %>
+        </span>
+        <span><%= @total_price %></span>
+        <%= t ".vnd" %>
+      </p>
+      <div>
+        <span>
+          <i class="glyphicon glyphicon-info-sign"></i>
+          <%= t ".details" %>
+        </span>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><h3><%= t ".course" %></h3></th>
+              <th><h3><%= t ".price" %></h3></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "cart_items/cart_item", cart_items: @cart_items, total_price: @total_price %>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="form-group">
+                  <%= f.hidden_field :amount, value: @total_price %>
+                </div>
+                <div class="form-group">
+                  <%= f.submit t("button.paying"), class: "btn btn-primary btn-lg right" %>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="transaction_fail"></div>
+    <% end %>
+  </div>
+</div>

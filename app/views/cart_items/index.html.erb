@@ -30,6 +30,12 @@
                   <%= t "button.purchase" %>
                 </button>
                 <%= render "modal_purchase", cart_items: @cart_items, total_price: @total_price %>
+                <br><br>
+                <div>
+                  <%= link_to new_paying_path, class: "btn btn-success btn-lg" do %>
+                    <%= t "button.paying" %>
+                  <% end %>
+                </div>
               <% else %>
                 <%= link_to t("button.purchase_now"), orders_path, method: :post, class: "btn btn-danger btn-lg" %>
               <% end %>

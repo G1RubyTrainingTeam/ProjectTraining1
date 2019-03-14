@@ -154,7 +154,8 @@ ActiveRecord::Schema.define(version: 2019_01_04_072357) do
   create_table "payings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "e_wallet_id"
     t.integer "amount"
-    t.integer "status"
+    t.string "confirmation_code"
+    t.integer "status", default: 0
     t.string "uname"
     t.string "uemail"
     t.integer "uid"

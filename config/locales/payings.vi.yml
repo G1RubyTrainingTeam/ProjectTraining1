@@ -1,0 +1,28 @@
+vi:
+  payings:
+    new:
+      order: "Hóa đơn"
+      user: "Người dùng: "
+      balances: "Số dư ví điện tử: "
+      vnd: " đồng"
+      total_price: "Tổng số tiền cần thanh toán: "
+      details: "Thông tin chi tiết:"
+      course: "Khóa học"
+      price: "Giá"
+    create:
+      title: "Nhập mã xác nhận"
+      confirm_code: "Mã xác nhận"
+      check_mail: "Hãy kiểm tra email để lấy mã xác nhận!"
+      btn_ok: "OK"
+      need_payin_alert: "Số dư không đủ, vui lòng nạp thêm tiền vào ví điện tử để tiếp tục."
+    update:
+      code_fail: "Mã xác nhận sai, thử lại"
+      expired: "Mã xác nhận đã hết hạn, bạn cần thực hiện thanh toán lại!"
+      no_paying: "Không tồn tại thanh toán"
+      success_paying: "Thanh toán thành công"
+  paying_mailer:
+    paying_email:
+      subject: "Mã xác nhận thanh toán"
+      greeting: "Gửi "
+      content: "Mã xác nhận của bạn là "
+      warning: " (Mã này chỉ có hiệu lực trong 2 phút)"

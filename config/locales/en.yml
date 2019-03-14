@@ -190,6 +190,7 @@ en:
     continue_view: "View another course"
     buy_course: "Add to cart"
     purchase_confirm: "Purchase"
+    paying: "Paying with e-wallet"
   search:
     average_rating: "Average rating"
     contact: "Has contact"

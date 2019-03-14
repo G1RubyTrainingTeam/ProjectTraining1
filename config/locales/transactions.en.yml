@@ -21,3 +21,4 @@ en:
       expired: "The code has expired, you need to make a new transaction!"
       no_transaction: "Transaction does not exist"
       success_transaction: "Successful transactions, you can make new transactions"
+      credit_date: "The credit card is expired."

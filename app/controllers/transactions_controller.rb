@@ -27,6 +27,10 @@ class TransactionsController < ApplicationController
       @transaction.errors.add :base, t(".expired")
       return
     end
+    if @transaction.credit.expiration_date < Time.now
+      @transaction.errors.add :base, t(".credit_expired")
+      return
+    end
     transaction_update
   end
 

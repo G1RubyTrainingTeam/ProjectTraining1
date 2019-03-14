@@ -1,3 +1,9 @@
-#link-new-credit:hover {
-  cursor: pointer; 
+#link-new-credit {
+  padding: 2px 13px;
+  &:hover{
+    cursor: pointer;
+  }
+  &.label{
+    font-size: 15px;
+  }
 }

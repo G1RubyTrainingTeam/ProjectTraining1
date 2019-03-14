@@ -24,3 +24,4 @@ vi:
       expired: "Mã xác nhận đã hết hạn, bạn cần thực hiện giao dịch mới!"
       no_transaction: "Giao dịch không tồn tại"
       success_transaction: "Giao dịch thành công, bạn có thể thực hiện giao dịch mới"
+      credit_date: "Thẻ bạn chọn đã hết hạn."

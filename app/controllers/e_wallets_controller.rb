@@ -1,4 +1,7 @@
 class EWalletsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
+
   def create
     if current_user.e_wallet.nil?
       e_wallet = current_user.build_e_wallet
@@ -12,8 +15,8 @@ class EWalletsController < ApplicationController
   end
 
   def show
-    @e_wallet = EWallet.find_by id: params[:id]
-    @approved_credits = @e_wallet.credits.approved
+    @e_wallet = current_user.e_wallet
+    @approved_credits = current_user.e_wallet.credits.approved
     if params[:number]
       @credit = Credit.find_by id: params[:number]
     end

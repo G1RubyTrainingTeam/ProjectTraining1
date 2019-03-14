@@ -22,7 +22,10 @@ class Ability
           if user.lecture?
             can :manage, [Course, Lesson]
           end
+          can [:new, :create,:update], Credit
           can [:new, :create,:update], Transaction
+          can [:new, :create,:update], Paying
+          can [:new, :create], EWallet
         end
     end
   end
