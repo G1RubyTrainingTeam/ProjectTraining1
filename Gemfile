@@ -6,7 +6,7 @@ ruby "2.5.1"
 gem "active_model_serializers"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-kaminari-views"
-gem "bootstrap-sass", "~> 3.3.7"
+gem "bootstrap-sass", "~> 3.4.1"
 gem "cancancan", "~> 2.0"
 gem "carrierwave"
 gem "cloudinary", "~> 1.9.1"
